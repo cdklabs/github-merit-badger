@@ -142,23 +142,21 @@ steps:
       ignore-usernames: '[kaizencc]'
 ```
 
-### Badge Type
+### Title Prefixes
 
-This is an ad-hoc property that allows you to toggle between different types of badge
-allocation mechanisms, now and in the future. The currently accepted values are `achievement`
-(the default) and `leaderboard`.
-
-If you specify `leaderboard`, then the Action returns badges related to _how a user compares to other contributors in the repository_. Consider the following example usage:
+Specify a list of title prefixes that the Action should accept. For example, the below code
+will only count PRs with titles that begin with `feat` or `fix`. It will ignore PRs with other
+titles like `chore` or `refactor`.
 
 ```yaml
-steps:
+steps: 
   - uses: kaizencc/github-merit-badger@main
     id: github-merit-badger
     with:
       github-token: ${{ secrets.GITHUB_TOKEN }}
-      badges: '[1st! :trophy:,top 3 :fire:,top 5 :sunglasses:]'
-      thresholds: '[1,3,5]'
-      badge-type: 'leaderboard'
+      badges: '[first-time-contributor,repeat-contributor,allstar-contributor]'
+      thresholds: '[0,1,5]'
+      title-prefixes: '[feat,fix]'
 ```
 
 When kaizencc@ submits a PR, the Action will find that he has submitted 25 lifetime PRs to the repository, which is good for 2nd place. kaizencc@ will thus receive the `top 3 :fire:` badge on their PR.
