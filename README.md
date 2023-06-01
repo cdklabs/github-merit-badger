@@ -29,7 +29,7 @@ jobs:
     permissions:
       pull-requests: write
     steps:
-      - uses: kaizencc/github-merit-badger@main
+      - uses: aws-github-ops/github-merit-badger@main
         id: github-merit-badger
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -64,7 +64,7 @@ Consider the following example usage:
 
 ```yaml
 steps:
-  - uses: kaizencc/github-merit-badger@main
+  - uses: aws-github-ops/github-merit-badger@main
     id: github-merit-badger
     with:
       github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -84,7 +84,7 @@ to 1 with the `badges` parameter:
 
 ```yaml
 steps:
-  - uses: kaizencc/github-merit-badger@main
+  - uses: aws-github-ops/github-merit-badger@main
     id: github-merit-badger
     with:
       github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -113,7 +113,7 @@ Specify a number of days you want the Action to look at. For example, if you spe
 
 ```yaml
 steps:
-  - uses: kaizencc/github-merit-badger@main
+  - uses: aws-github-ops/github-merit-badger@main
     id: github-merit-badger
     with:
       github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -133,7 +133,7 @@ create badges for the community, but you don't want to add labels to the core ma
 
 ```yaml
 steps:
-  - uses: kaizencc/github-merit-badger@main
+  - uses: aws-github-ops/github-merit-badger@main
     id: github-merit-badger
     with:
       github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -150,7 +150,7 @@ titles like `chore` or `refactor`.
 
 ```yaml
 steps: 
-  - uses: kaizencc/github-merit-badger@main
+  - uses: aws-github-ops/github-merit-badger@main
     id: github-merit-badger
     with:
       github-token: ${{ secrets.GITHUB_TOKEN }}
