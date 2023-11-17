@@ -1,10 +1,21 @@
-const { GitHubActionTypeScriptProject } = require('projen-github-action-typescript');
+import { GitHubActionTypeScriptProject, RunsUsing } from 'projen-github-action-typescript';
+
 const project = new GitHubActionTypeScriptProject({
+  projenrcTs: true,
   defaultReleaseBranch: 'main',
   devDeps: ['projen-github-action-typescript'],
   deps: ['heap-js'],
   name: 'github-merit-badger',
+  autoApproveOptions: {
+    allowedUsernames: ['aws-sdk-osds'],
+    secret: 'PROJEN_GITHUB_TOKEN',
+  },
+  autoApproveUpgrades: true,
   actionMetadata: {
+    runs: {
+      main: 'dist/index.js',
+      using: RunsUsing.NODE_20,
+    },
     inputs: {
       'github-token': {
         description: 'github token',
