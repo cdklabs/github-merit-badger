@@ -2,7 +2,6 @@
   "name": "github-merit-badger",
   "scripts": {
     "build": "npx projen build",
-    "bump": "npx projen bump",
     "clobber": "npx projen clobber",
     "compile": "npx projen compile",
     "default": "npx projen default",
@@ -12,10 +11,8 @@
     "post-compile": "npx projen post-compile",
     "post-upgrade": "npx projen post-upgrade",
     "pre-compile": "npx projen pre-compile",
-    "release": "npx projen release",
     "test": "npx projen test",
     "test:watch": "npx projen test:watch",
-    "unbump": "npx projen unbump",
     "upgrade": "npx projen upgrade",
     "watch": "npx projen watch",
     "projen": "npx projen"
@@ -35,7 +32,6 @@
     "npm-check-updates": "^16",
     "projen": "^0.76.28",
     "projen-github-action-typescript": "^0.0.395",
-    "standard-version": "^9",
     "ts-jest": "^28.0.8",
     "ts-node": "^10.9.1",
     "typescript": "^4.9.5"
