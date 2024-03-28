@@ -2,6 +2,7 @@ import { GitHubActionTypeScriptProject, RunsUsing } from 'projen-github-action-t
 
 const project = new GitHubActionTypeScriptProject({
   projenrcTs: true,
+  release: false,
   defaultReleaseBranch: 'main',
   devDeps: ['projen-github-action-typescript'],
   deps: ['heap-js'],
