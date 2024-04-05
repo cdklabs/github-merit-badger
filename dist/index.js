@@ -26033,8 +26033,7 @@ module.exports = {
   urlHasHttpsScheme,
   urlIsHttpHttpsScheme,
   readAllBytes,
-  normalizeMethodRecord,
-  parseMetadata
+  normalizeMethodRecord
 }
 
 
