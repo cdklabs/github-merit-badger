@@ -9,7 +9,7 @@ const project = new GitHubActionTypeScriptProject({
   name: 'github-merit-badger',
   autoApproveOptions: {
     allowedUsernames: ['cdklabs-automation'],
-    secret: 'PROJEN_GITHUB_TOKEN',
+    secret: 'GITHUB_TOKEN',
   },
   autoApproveUpgrades: true,
   actionMetadata: {
