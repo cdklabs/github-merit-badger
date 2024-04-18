@@ -8,7 +8,7 @@ const project = new GitHubActionTypeScriptProject({
   deps: ['heap-js'],
   name: 'github-merit-badger',
   autoApproveOptions: {
-    allowedUsernames: ['aws-sdk-osds'],
+    allowedUsernames: ['cdklabs-automation'],
     secret: 'PROJEN_GITHUB_TOKEN',
   },
   autoApproveUpgrades: true,
