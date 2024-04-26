@@ -2027,9 +2027,9 @@ eastasianwidth@^0.2.0:
   integrity sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==
 
 electron-to-chromium@^1.4.668:
-  version "1.4.748"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.748.tgz#aa7d4f2f3eac3a6a863cd1779bd4682b4bb68ed5"
-  integrity sha512-VWqjOlPZn70UZ8FTKUOkUvBLeTQ0xpty66qV0yJcAGY2/CthI4xyW9aEozRVtuwv3Kpf5xTesmJUcPwuJmgP4A==
+  version "1.4.749"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.749.tgz#9869e2e258141da26a2272b58264584c3461279d"
+  integrity sha512-LRMMrM9ITOvue0PoBrvNIraVmuDbJV5QC9ierz/z5VilMdPOVMjOtpICNld3PuXuTZ3CHH/UPxX9gHhAPwi+0Q==
 
 emittery@^0.10.2:
   version "0.10.2"
@@ -3754,9 +3754,9 @@ lowercase-keys@^3.0.0:
   integrity sha512-ozCC6gdQ+glXOQsveKD0YsDy8DSQFjDTz4zyzEHNV5+JP5D62LmfDZ6o1cycFx9ouG940M5dE8C8CTewdj2YWQ==
 
 lru-cache@^10.2.0:
-  version "10.2.0"
-  resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-10.2.0.tgz#0bd445ca57363465900f4d1f9bd8db343a4d95c3"
-  integrity sha512-2bIM8x+VAf6JT4bKAljS1qUWgMsqZRPGJS6FSahIMPVvctcNhyVp7AJu7quxOW9jwkryBReKZY5tY5JYv2n/7Q==
+  version "10.2.1"
+  resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-10.2.1.tgz#e8d901141f22937968e45a6533d52824070151e4"
+  integrity sha512-tS24spDe/zXhWbNPErCHs/AGOzbKGHT+ybSBqmdLm8WZ1xXLWvH8Qn71QPAlqVhd0qUTWjy+Kl9JmISgDdEjsA==
 
 lru-cache@^5.1.1:
   version "5.1.1"
@@ -4082,9 +4082,9 @@ npm-bundled@^3.0.0:
     npm-normalize-package-bin "^3.0.0"
 
 npm-check-updates@^16:
-  version "16.14.18"
-  resolved "https://registry.yarnpkg.com/npm-check-updates/-/npm-check-updates-16.14.18.tgz#d87501e5eebf305196caa4edb7137b56937ec99c"
-  integrity sha512-9iaRe9ohx9ykdbLjPRIYcq1A0RkrPYUx9HmQK1JIXhfxtJCNE/+497H9Z4PGH6GWRALbz5KF+1iZoySK2uSEpQ==
+  version "16.14.20"
+  resolved "https://registry.yarnpkg.com/npm-check-updates/-/npm-check-updates-16.14.20.tgz#02c06df77593f5d32e19966b19dddeaca73f69a0"
+  integrity sha512-sYbIhun4DrjO7NFOTdvs11nCar0etEhZTsEjL47eM0TuiGMhmYughRCxG2SpGRmGAQ7AkwN7bw2lWzoE7q6yOQ==
   dependencies:
     "@types/semver-utils" "^1.1.1"
     chalk "^5.3.0"
@@ -4551,9 +4551,9 @@ rc@1.2.8:
     strip-json-comments "~2.0.1"
 
 react-is@^18.0.0:
-  version "18.2.0"
-  resolved "https://registry.yarnpkg.com/react-is/-/react-is-18.2.0.tgz#199431eeaaa2e09f86427efbb4f1473edb47609b"
-  integrity sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==
+  version "18.3.0"
+  resolved "https://registry.yarnpkg.com/react-is/-/react-is-18.3.0.tgz#6c2d9b6cdd4c2cffb7c89b1bcb57bc44d12f1993"
+  integrity sha512-wRiUsea88TjKDc4FBEn+sLvIDesp6brMbGWnJGjew2waAc9evdhja/2LvePc898HJbHw0L+MTWy7NhpnELAvLQ==
 
 read-package-json-fast@^3.0.0:
   version "3.0.2"
