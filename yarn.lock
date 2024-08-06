@@ -1294,9 +1294,9 @@ camelcase@^6.2.0:
   integrity sha512-Gmy6FhYlCY7uOElZUSbxo2UCDH8owEk996gkbrpsgGtrJLM3J7jGxl9Ic7Qwwj4ivOE5AWZWRMecDdF7hqGjFA==
 
 caniuse-lite@^1.0.30001646:
-  version "1.0.30001647"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001647.tgz#56d58c5a4ef72913a4465f9766af895a4ead0165"
-  integrity sha512-n83xdNiyeNcHpzWY+1aFbqCK7LuLfBricc4+alSQL2Xb6OR3XpnQAmlDG+pQcdTfiHRuLcQ96VOfrPSGiNJYSg==
+  version "1.0.30001649"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001649.tgz#3ec700309ca0da2b0d3d5fb03c411b191761c992"
+  integrity sha512-fJegqZZ0ZX8HOWr6rcafGr72+xcgJKI9oWfDW5DrD7ExUtgZC7a7R7ZYmZqplh7XDocFdGeIFn7roAxhOeYrPQ==
 
 case@^1.6.3:
   version "1.6.3"
@@ -3252,10 +3252,10 @@ pretty-format@^28.0.0, pretty-format@^28.1.3:
     ansi-styles "^5.0.0"
     react-is "^18.0.0"
 
-projen-github-action-typescript@^0.0.404:
-  version "0.0.404"
-  resolved "https://registry.yarnpkg.com/projen-github-action-typescript/-/projen-github-action-typescript-0.0.404.tgz#966176b07a15511d83067ab74fd8d2d020a9a02d"
-  integrity sha512-sJiYl661G2fL2sJXq/nRE2nyPktq7RUXbqOkiN3sq6yi6SMhclro7HIkmW7009RQEc2GRAuYOw/nsWSy35thfQ==
+projen-github-action-typescript@^0.0.405:
+  version "0.0.405"
+  resolved "https://registry.yarnpkg.com/projen-github-action-typescript/-/projen-github-action-typescript-0.0.405.tgz#d111463502b49997c554dc9e7c96b63b8abdc2ee"
+  integrity sha512-CzPcJLpMfYDT1aX7jiGgZJwuiy7Z1/Mw13Upey/lbQuBaVzqN+/nfTC32EHG0LWhJPRh/IfCfrQdbnvkOLk9Uw==
 
 projen@^0.84.13:
   version "0.84.13"
