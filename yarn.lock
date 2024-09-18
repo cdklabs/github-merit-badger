@@ -3290,15 +3290,15 @@ pretty-format@^28.0.0, pretty-format@^28.1.3:
     ansi-styles "^5.0.0"
     react-is "^18.0.0"
 
-projen-github-action-typescript@^0.0.446:
-  version "0.0.446"
-  resolved "https://registry.yarnpkg.com/projen-github-action-typescript/-/projen-github-action-typescript-0.0.446.tgz#0af10b851d53b5f7a0c6157746562e27444bfab0"
-  integrity sha512-83aOy8k5nN4nziUQ2RphBlAgP9V7nUk+gj8AzilI9vT92n+oHkiVxyDMESR3pvrqwuxHjTwgUfgqBdQ0lMgG/A==
+projen-github-action-typescript@^0.0.447:
+  version "0.0.447"
+  resolved "https://registry.yarnpkg.com/projen-github-action-typescript/-/projen-github-action-typescript-0.0.447.tgz#3c7b033774b068743919dc4444151c787e519f9c"
+  integrity sha512-OUdrTxrUUF5cvndVjHNzyCNr+D6A4WXbKWk+JC4WWooCMWPgUQDXKf4KPhiab0cbOmVYJrv/8w4teEpV8GuQ7A==
 
-projen@^0.87.3:
-  version "0.87.3"
-  resolved "https://registry.yarnpkg.com/projen/-/projen-0.87.3.tgz#2cc9df7bf934d4cf7c717b1f43df15064a78c6cb"
-  integrity sha512-eNaXICh0xc5xzdvd8ZBqK5emcPPARgTGqf8qcfuEcnRdM3nO6SuXzl9k/QzkLaOJU/Fcrcv+XYSXtukHK+RPuA==
+projen@^0.87.4:
+  version "0.87.4"
+  resolved "https://registry.yarnpkg.com/projen/-/projen-0.87.4.tgz#97da75d7893a28ea110b887215975c50a7d6d160"
+  integrity sha512-PJA8xQubV/1x5S4xbP2uazpkTd5zYb7JqEprGxNZ+KNsWUab0MK2cXeYgW6zp/xpITiD+l9Z0fR5TG83OyU6nQ==
   dependencies:
     "@iarna/toml" "^2.2.5"
     case "^1.6.3"
