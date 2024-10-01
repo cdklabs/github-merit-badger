@@ -1583,9 +1583,9 @@ doctrine@^3.0.0:
     esutils "^2.0.2"
 
 electron-to-chromium@^1.5.28:
-  version "1.5.29"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.29.tgz#aa592a3caa95d07cc26a66563accf99fa573a1ee"
-  integrity sha512-PF8n2AlIhCKXQ+gTpiJi0VhcHDb69kYX4MtCiivctc2QD3XuNZ/XIOlbGzt7WAjjEev0TtaH6Cu3arZExm5DOw==
+  version "1.5.30"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.30.tgz#5b264b489cfe0c3dd71097c164d795444834e7c7"
+  integrity sha512-sXI35EBN4lYxzc/pIGorlymYNzDBOqkSlVRe6MkgBsW/hW1tpC/HDJ2fjG7XnjakzfLEuvdmux0Mjs6jHq4UOA==
 
 emittery@^0.10.2:
   version "0.10.2"
@@ -3290,10 +3290,10 @@ pretty-format@^28.0.0, pretty-format@^28.1.3:
     ansi-styles "^5.0.0"
     react-is "^18.0.0"
 
-projen-github-action-typescript@^0.0.459:
-  version "0.0.459"
-  resolved "https://registry.yarnpkg.com/projen-github-action-typescript/-/projen-github-action-typescript-0.0.459.tgz#7df38fd0661dbfdd92dbf4cbef5f1f6488c97e4e"
-  integrity sha512-i8dzAvhTs0noDbh3esLbyRGkFYqpmjKJsty6nyueyMPvZKNv3+cN7ZDzouRvMCZJDxfnyrgfPj2O2x78zww7hA==
+projen-github-action-typescript@^0.0.460:
+  version "0.0.460"
+  resolved "https://registry.yarnpkg.com/projen-github-action-typescript/-/projen-github-action-typescript-0.0.460.tgz#867a32ae3fdda3f765ebc3a569a84a3adb7bb268"
+  integrity sha512-UpJbtRtyulmtikOlDxLfZehTcj+hTpQo4wA6ek2nF3UfNN7F69KlCu3Yzz7iWyYUIwjM+na8GacaMBM/yDU1gg==
 
 projen@^0.88.0:
   version "0.88.0"
