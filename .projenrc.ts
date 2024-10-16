@@ -53,5 +53,8 @@ const project = new GitHubActionTypeScriptProject({
       },
     },
   },
+  githubOptions: {
+    mergify: false,
+  },
 });
 project.synth();
