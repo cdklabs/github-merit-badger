@@ -55,6 +55,7 @@ const project = new GitHubActionTypeScriptProject({
   },
   githubOptions: {
     mergify: false,
+    mergeQueue: true,
   },
 });
 project.synth();
