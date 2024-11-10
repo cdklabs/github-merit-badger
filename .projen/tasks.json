@@ -89,6 +89,9 @@
     "eslint": {
       "name": "eslint",
       "description": "Runs eslint against the codebase",
+      "env": {
+        "ESLINT_USE_FLAT_CONFIG": "false"
+      },
       "steps": [
         {
           "exec": "eslint --ext .ts,.tsx --fix --no-error-on-unmatched-pattern $@ src test build-tools projenrc .projenrc.ts",
@@ -171,7 +174,7 @@
           "exec": "yarn install --check-files"
         },
         {
-          "exec": "yarn upgrade @types/jest @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser @vercel/ncc constructs eslint-import-resolver-typescript eslint-plugin-import eslint jest jest-junit projen projen-github-action-typescript ts-jest ts-node typescript @actions/core @actions/github heap-js"
+          "exec": "yarn upgrade @stylistic/eslint-plugin @types/jest @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser @vercel/ncc constructs eslint-import-resolver-typescript eslint-plugin-import eslint jest jest-junit projen projen-github-action-typescript ts-jest ts-node typescript @actions/core @actions/github heap-js"
         },
         {
           "exec": "npx projen"
