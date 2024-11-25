@@ -31,7 +31,7 @@
     "jest": "^28.1.3",
     "jest-junit": "^15",
     "projen": "^0.90.5",
-    "projen-github-action-typescript": "^0.0.509",
+    "projen-github-action-typescript": "^0.0.510",
     "ts-jest": "^28.0.8",
     "ts-node": "^10.9.2",
     "typescript": "^4.9.5"
