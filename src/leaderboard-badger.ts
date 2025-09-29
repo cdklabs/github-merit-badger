@@ -9,7 +9,7 @@ import { Badger } from './badger';
 export class LeaderboardBadger extends Badger {
   public async runBadgerWorkflow() {
     const username = await this.getGitHubUsername();
-    if (this.ignoreThisUsername(username)) {
+    if (await this.ignoreThisUsername(username)) {
       console.log(`Detected ${username} in the list of ignored users. Exiting`);
       return;
     }

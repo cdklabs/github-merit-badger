@@ -10,6 +10,7 @@ export interface BadgerProps {
   readonly badgeDescriptions?: string[];
   readonly thresholds: number[];
   readonly ignoreUsernames: string[];
+  readonly ignoreTeam?: string;
   readonly prefixes?: string[];
 }
 
@@ -25,6 +26,7 @@ export abstract class Badger {
   private pullRequestNumber: number;
   private timestampDate?: Date;
   private ignoreUsernames?: string[];
+  private ignoreTeam?: string;
   private doWriteComment: boolean;
   private prefixes?: string[];
 
@@ -44,6 +46,7 @@ export abstract class Badger {
 
     this.timestampDate = props.days ? daysToDate(props.days) : undefined;
     this.ignoreUsernames = props.ignoreUsernames;
+    this.ignoreTeam = props.ignoreTeam || undefined;
     this.doWriteComment = props.badgeDescriptions ? true : false;
     this.prefixes = props.prefixes;
 
@@ -71,8 +74,42 @@ export abstract class Badger {
    */
   public abstract determineRating(pullRequests: any[], username?: string): number;
 
-  protected ignoreThisUsername(username: string) {
-    return this.ignoreUsernames?.includes(username);
+  protected async ignoreThisUsername(username: string): Promise<boolean> {
+    // Check individual usernames first (backward compatibility)
+    if (this.ignoreUsernames?.includes(username)) {
+      return true;
+    }
+
+    // Check team membership if team is specified
+    if (this.ignoreTeam) {
+      try {
+        const [org, team] = this.ignoreTeam.split('/');
+        if (!org || !team) {
+          core.warning(`Invalid team format: ${this.ignoreTeam}. Expected format: "org/team-slug"`);
+          return false;
+        }
+
+        const response = await this.octokit.rest.teams.getMembershipForUserInOrg({
+          org,
+          team_slug: team,
+          username,
+        });
+
+        // If we get a successful response, the user is a team member
+        return response.status === 200;
+      } catch (error: any) {
+        // User is not a team member or team doesn't exist (404)
+        // or we don't have permission to check (403)
+        if (error.status === 404 || error.status === 403) {
+          return false;
+        }
+        // Log other errors but don't fail the action
+        core.warning(`Error checking team membership for ${username}: ${error.message}`);
+        return false;
+      }
+    }
+
+    return false;
   }
 
   protected determineBadge(thresholdNumber: number) {

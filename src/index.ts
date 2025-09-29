@@ -11,6 +11,7 @@ async function run() {
   const badgeDescriptions: string[] = renderListInput(core.getInput('badge-descriptions'));
   const badgeType: string = core.getInput('badge-type');
   const ignoreUsernames: string[] = renderListInput(core.getInput('ignore-usernames'));
+  const ignoreTeam: string = core.getInput('ignore-team');
   const days = Number(core.getInput('days'));
   const prefixes = renderListInput(core.getInput('title-prefixes'));
 
@@ -34,6 +35,7 @@ async function run() {
       thresholds,
       badgeDescriptions: badgeDescriptions.length === 0 ? undefined : badgeDescriptions,
       ignoreUsernames,
+      ignoreTeam,
       days,
       prefixes,
     });
@@ -44,6 +46,7 @@ async function run() {
       thresholds,
       badgeDescriptions: badgeDescriptions.length === 0 ? undefined : badgeDescriptions,
       ignoreUsernames,
+      ignoreTeam,
       days,
       prefixes,
     });

@@ -46,6 +46,10 @@ const project = new GitHubActionTypeScriptProject({
         description: 'ignore pull requests from these authors',
         required: false,
       },
+      'ignore-team': {
+        description: 'ignore pull requests from members of this GitHub team (format: "org/team-slug")',
+        required: false,
+      },
       'badge-type': {
         description: 'a flag for different ways of measuring contributions',
         default: 'total',
