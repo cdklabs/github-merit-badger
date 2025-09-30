@@ -29,7 +29,7 @@ jobs:
     permissions:
       pull-requests: write
     steps:
-      - uses: aws-github-ops/github-merit-badger@main
+      - uses: cdklabs/github-merit-badger@main
         id: github-merit-badger
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -64,7 +64,7 @@ Consider the following example usage:
 
 ```yaml
 steps:
-  - uses: aws-github-ops/github-merit-badger@main
+  - uses: cdklabs/github-merit-badger@main
     id: github-merit-badger
     with:
       github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -84,7 +84,7 @@ to 1 with the `badges` parameter:
 
 ```yaml
 steps:
-  - uses: aws-github-ops/github-merit-badger@main
+  - uses: cdklabs/github-merit-badger@main
     id: github-merit-badger
     with:
       github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -113,7 +113,7 @@ Specify a number of days you want the Action to look at. For example, if you spe
 
 ```yaml
 steps:
-  - uses: aws-github-ops/github-merit-badger@main
+  - uses: cdklabs/github-merit-badger@main
     id: github-merit-badger
     with:
       github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -133,7 +133,7 @@ create badges for the community, but you don't want to add labels to the core ma
 
 ```yaml
 steps:
-  - uses: aws-github-ops/github-merit-badger@main
+  - uses: cdklabs/github-merit-badger@main
     id: github-merit-badger
     with:
       github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -163,8 +163,8 @@ steps:
       ignore-team: 'aws/aws-cdk-team'
 ```
 
-**Note:** You can use both `ignore-usernames` and `ignore-team` together. Individual usernames
-in `ignore-usernames` take priority and will be checked first before team membership.
+**Note:** You can use both `ignore-usernames` and `ignore-team` together, with all specified users and teams being excluded
+from badge calculations.
 
 **Requirements:** The GitHub token used must have permission to read team membership information.
 For public teams, this works with standard repository permissions. For private teams, you may
@@ -178,7 +178,7 @@ titles like `chore` or `refactor`.
 
 ```yaml
 steps: 
-  - uses: aws-github-ops/github-merit-badger@main
+  - uses: cdklabs/github-merit-badger@main
     id: github-merit-badger
     with:
       github-token: ${{ secrets.GITHUB_TOKEN }}

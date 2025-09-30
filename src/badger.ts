@@ -75,7 +75,7 @@ export abstract class Badger {
   public abstract determineRating(pullRequests: any[], username?: string): number;
 
   protected async ignoreThisUsername(username: string): Promise<boolean> {
-    // Check individual usernames first (backward compatibility)
+    // Check individual usernames 
     if (this.ignoreUsernames?.includes(username)) {
       return true;
     }
