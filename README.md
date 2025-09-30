@@ -154,7 +154,7 @@ organization name and `team-slug` is the team's slug (URL-friendly name).
 
 ```yaml
 steps:
-  - uses: aws-github-ops/github-merit-badger@main
+  - uses: cdklabs/github-merit-badger@main
     id: github-merit-badger
     with:
       github-token: ${{ secrets.GITHUB_TOKEN }}
