@@ -66,146 +66,94 @@ describe('Badger ignore functionality', () => {
     });
   });
 
-  describe('ignore-team functionality', () => {
-    it('should ignore users who are members of the specified team', async () => {
-      const props: BadgerProps = {
-        token: 'fake-token',
-        badges: ['badge1'],
-        thresholds: [0],
-        ignoreUsernames: [],
-        ignoreTeam: 'test-org/maintainers',
-      };
-
-      // Mock successful team membership check
-      mockOctokit.rest.teams.getMembershipForUserInOrg.mockResolvedValue({
-        status: 200,
-      });
-
-      const badger = new TestBadger(props);
-
-      const result = await badger.testIgnoreThisUsername('team-member');
-
-      expect(result).toBe(true);
-      expect(mockOctokit.rest.teams.getMembershipForUserInOrg).toHaveBeenCalledWith({
-        org: 'test-org',
-        team_slug: 'maintainers',
-        username: 'team-member',
-      });
-    });
-
-    it('should not ignore users who are not members of the specified team', async () => {
-      const props: BadgerProps = {
-        token: 'fake-token',
-        badges: ['badge1'],
-        thresholds: [0],
-        ignoreUsernames: [],
-        ignoreTeam: 'test-org/maintainers',
-      };
-
-      // Mock 404 response (user not a team member)
-      mockOctokit.rest.teams.getMembershipForUserInOrg.mockRejectedValue({
-        status: 404,
-      });
-
-      const badger = new TestBadger(props);
-
-      const result = await badger.testIgnoreThisUsername('non-member');
-
-      expect(result).toBe(false);
-      expect(mockOctokit.rest.teams.getMembershipForUserInOrg).toHaveBeenCalledWith({
-        org: 'test-org',
-        team_slug: 'maintainers',
-        username: 'non-member',
-      });
-    });
-
-    it('should handle invalid team format gracefully', async () => {
-      const props: BadgerProps = {
-        token: 'fake-token',
-        badges: ['badge1'],
-        thresholds: [0],
-        ignoreUsernames: [],
-        ignoreTeam: 'invalid-format',
-      };
-
-      const badger = new TestBadger(props);
-
-      const result = await badger.testIgnoreThisUsername('any-user');
-
-      expect(result).toBe(false);
-      // Should not call the API with invalid format
-      expect(mockOctokit.rest.teams.getMembershipForUserInOrg).not.toHaveBeenCalled();
-    });
-
-    it('should prioritize ignore-usernames over team membership', async () => {
+  describe('ignore-teams functionality', () => {
+    it('should handle single and multiple teams with proper validation and early return', async () => {
       const props: BadgerProps = {
         token: 'fake-token',
         badges: ['badge1'],
         thresholds: [0],
         ignoreUsernames: ['priority-user'],
-        ignoreTeam: 'test-org/maintainers',
+        ignoreTeams: ['test-org/maintainers', 'test-org/admins', 'invalid-format'],
       };
 
       const badger = new TestBadger(props);
 
-      const result = await badger.testIgnoreThisUsername('priority-user');
+      // Mock team membership API
+      mockOctokit.rest.teams.getMembershipForUserInOrg.mockImplementation(({ team_slug, username }: any) => {
+        if (username === 'team-member' && team_slug === 'admins') {
+          return Promise.resolve({ status: 200 });
+        }
+        return Promise.reject({ status: 404 });
+      });
 
-      expect(result).toBe(true);
-      // Should not call team API since user is already in ignore list
+      // ignore-usernames check (first it checks the ignore usr list)
+      mockOctokit.rest.teams.getMembershipForUserInOrg.mockClear();
+      expect(await badger.testIgnoreThisUsername('priority-user')).toBe(true);
+      expect(mockOctokit.rest.teams.getMembershipForUserInOrg).not.toHaveBeenCalled();
+
+      // User found in second team (early return after second team)
+      mockOctokit.rest.teams.getMembershipForUserInOrg.mockClear();
+      expect(await badger.testIgnoreThisUsername('team-member')).toBe(true);
+      expect(mockOctokit.rest.teams.getMembershipForUserInOrg).toHaveBeenCalledTimes(2);
+
+      // User not in any team (all teams checked, invalid format skipped)
+      mockOctokit.rest.teams.getMembershipForUserInOrg.mockClear();
+      expect(await badger.testIgnoreThisUsername('regular-user')).toBe(false);
+      expect(mockOctokit.rest.teams.getMembershipForUserInOrg).toHaveBeenCalledTimes(2);
+
+      // Empty teams array
+      const emptyTeamsProps: BadgerProps = {
+        token: 'fake-token',
+        badges: ['badge1'],
+        thresholds: [0],
+        ignoreUsernames: [],
+        ignoreTeams: [],
+      };
+      const emptyBadger = new TestBadger(emptyTeamsProps);
+      mockOctokit.rest.teams.getMembershipForUserInOrg.mockClear();
+      expect(await emptyBadger.testIgnoreThisUsername('any-user')).toBe(false);
       expect(mockOctokit.rest.teams.getMembershipForUserInOrg).not.toHaveBeenCalled();
     });
 
-    it('should handle API errors gracefully', async () => {
+    it('should handle API errors and edge cases gracefully', async () => {
       const props: BadgerProps = {
         token: 'fake-token',
         badges: ['badge1'],
         thresholds: [0],
         ignoreUsernames: [],
-        ignoreTeam: 'test-org/maintainers',
+        ignoreTeams: ['test-org/private-team', 'test-org/public-team'],
       };
-
-      // Mock 403 response (permission denied)
-      mockOctokit.rest.teams.getMembershipForUserInOrg.mockRejectedValue({
-        status: 403,
-        message: 'Forbidden',
-      });
 
       const badger = new TestBadger(props);
 
-      const result = await badger.testIgnoreThisUsername('some-user');
+      // Mock API errors for different scenarios
+      mockOctokit.rest.teams.getMembershipForUserInOrg.mockImplementation(({ team_slug }: any) => {
+        if (team_slug === 'private-team') {
+          return Promise.reject({ status: 403, message: 'Forbidden' });
+        } else if (team_slug === 'public-team') {
+          return Promise.resolve({ status: 200 });
+        }
+        return Promise.reject({ status: 404 });
+      });
 
-      expect(result).toBe(false);
-    });
-  });
+      // Should handle 403 error and continue to check next team
+      const result = await badger.testIgnoreThisUsername('test-user');
+      expect(result).toBe(true);
+      expect(mockOctokit.rest.teams.getMembershipForUserInOrg).toHaveBeenCalledTimes(2);
 
-  describe('combined ignore functionality', () => {
-    it('should work with both ignore-usernames and ignore-team', async () => {
-      const props: BadgerProps = {
+      // Test undefined teams
+      const undefinedTeamsProps: BadgerProps = {
         token: 'fake-token',
         badges: ['badge1'],
         thresholds: [0],
-        ignoreUsernames: ['individual-user'],
-        ignoreTeam: 'test-org/maintainers',
+        ignoreUsernames: [],
+        // ignoreTeams is undefined
       };
-
-      // Mock team member check
-      mockOctokit.rest.teams.getMembershipForUserInOrg.mockResolvedValue({
-        status: 200,
-      });
-
-      const badger = new TestBadger(props);
-
-      // Should ignore individual user
-      expect(await badger.testIgnoreThisUsername('individual-user')).toBe(true);
-
-      // Should ignore team member
-      expect(await badger.testIgnoreThisUsername('team-member')).toBe(true);
-
-      // Should not ignore non-member, non-listed user
-      mockOctokit.rest.teams.getMembershipForUserInOrg.mockRejectedValue({
-        status: 404,
-      });
-      expect(await badger.testIgnoreThisUsername('regular-user')).toBe(false);
+      const undefinedBadger = new TestBadger(undefinedTeamsProps);
+      mockOctokit.rest.teams.getMembershipForUserInOrg.mockClear();
+      expect(await undefinedBadger.testIgnoreThisUsername('any-user')).toBe(false);
+      expect(mockOctokit.rest.teams.getMembershipForUserInOrg).not.toHaveBeenCalled();
     });
   });
+
 });

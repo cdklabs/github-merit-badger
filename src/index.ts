@@ -11,11 +11,11 @@ async function run() {
   const badgeDescriptions: string[] = renderListInput(core.getInput('badge-descriptions'));
   const badgeType: string = core.getInput('badge-type');
   const ignoreUsernames: string[] = renderListInput(core.getInput('ignore-usernames'));
-  const ignoreTeam: string = core.getInput('ignore-team');
+  const ignoreTeams: string[] = renderListInput(core.getInput('ignore-teams'));
   const days = Number(core.getInput('days'));
   const prefixes = renderListInput(core.getInput('title-prefixes'));
 
-  console.log(badges, badgeDescriptions, thresholds, badgeType, ignoreUsernames, days, prefixes);
+  console.log(badges, badgeDescriptions, thresholds, badgeType, ignoreUsernames, ignoreTeams, days, prefixes);
 
   if (badges.length === 0) {
     core.setFailed('must have at least one badge in the input');
@@ -35,7 +35,7 @@ async function run() {
       thresholds,
       badgeDescriptions: badgeDescriptions.length === 0 ? undefined : badgeDescriptions,
       ignoreUsernames,
-      ignoreTeam,
+      ignoreTeams,
       days,
       prefixes,
     });
@@ -46,7 +46,7 @@ async function run() {
       thresholds,
       badgeDescriptions: badgeDescriptions.length === 0 ? undefined : badgeDescriptions,
       ignoreUsernames,
-      ignoreTeam,
+      ignoreTeams,
       days,
       prefixes,
     });

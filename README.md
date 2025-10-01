@@ -142,15 +142,15 @@ steps:
       ignore-usernames: '[kaizencc]'
 ```
 
-### Ignore Team
+### Ignore Teams
 
-Specify a GitHub team whose members should be ignored by the Action. This is a more scalable
+Specify one or more GitHub teams whose members should be ignored by the Action. This is a more scalable
 alternative to `ignore-usernames` as you don't need to manually maintain a list of individual
 usernames. Team membership is managed through GitHub Teams, making it easier to add or remove
 maintainers without updating your workflow files.
 
-The team should be specified in the format `"org/team-slug"` where `org` is your GitHub
-organization name and `team-slug` is the team's slug (URL-friendly name).
+Teams should be specified in the format `"[org/team-slug1,org/team-slug2]"` where `org` is your GitHub
+organization name and `team-slug` is the team's slug (URL-friendly name). You can specify multiple teams.
 
 ```yaml
 steps:
@@ -160,11 +160,10 @@ steps:
       github-token: ${{ secrets.GITHUB_TOKEN }}
       badges: '[first-time-contributor,repeat-contributor,allstar-contributor]'
       thresholds: '[0,1,5]'
-      ignore-team: 'aws/aws-cdk-team'
+      ignore-teams: '[aws/aws-cdk-team]'
 ```
 
-**Note:** You can use both `ignore-usernames` and `ignore-team` together, with all specified users and teams being excluded
-from badge calculations.
+**Note:** You can use both `ignore-usernames` and `ignore-teams` together, with all specified users and teams being excluded.
 
 **Requirements:** The GitHub token used must have permission to read team membership information.
 For public teams, this works with standard repository permissions. For private teams, you may
