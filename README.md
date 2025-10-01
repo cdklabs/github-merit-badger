@@ -29,7 +29,7 @@ jobs:
     permissions:
       pull-requests: write
     steps:
-      - uses: aws-github-ops/github-merit-badger@main
+      - uses: cdklabs/github-merit-badger@main
         id: github-merit-badger
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -64,7 +64,7 @@ Consider the following example usage:
 
 ```yaml
 steps:
-  - uses: aws-github-ops/github-merit-badger@main
+  - uses: cdklabs/github-merit-badger@main
     id: github-merit-badger
     with:
       github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -84,7 +84,7 @@ to 1 with the `badges` parameter:
 
 ```yaml
 steps:
-  - uses: aws-github-ops/github-merit-badger@main
+  - uses: cdklabs/github-merit-badger@main
     id: github-merit-badger
     with:
       github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -113,7 +113,7 @@ Specify a number of days you want the Action to look at. For example, if you spe
 
 ```yaml
 steps:
-  - uses: aws-github-ops/github-merit-badger@main
+  - uses: cdklabs/github-merit-badger@main
     id: github-merit-badger
     with:
       github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -133,7 +133,7 @@ create badges for the community, but you don't want to add labels to the core ma
 
 ```yaml
 steps:
-  - uses: aws-github-ops/github-merit-badger@main
+  - uses: cdklabs/github-merit-badger@main
     id: github-merit-badger
     with:
       github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -141,6 +141,33 @@ steps:
       thresholds: '[0,1,5]'
       ignore-usernames: '[kaizencc]'
 ```
+
+### Ignore Teams
+
+Specify one or more GitHub teams whose members should be ignored by the Action. This is a more scalable
+alternative to `ignore-usernames` as you don't need to manually maintain a list of individual
+usernames. Team membership is managed through GitHub Teams, making it easier to add or remove
+maintainers without updating your workflow files.
+
+Teams should be specified in the format `"[org/team-slug1,org/team-slug2]"` where `org` is your GitHub
+organization name and `team-slug` is the team's slug (URL-friendly name). You can specify multiple teams.
+
+```yaml
+steps:
+  - uses: cdklabs/github-merit-badger@main
+    id: github-merit-badger
+    with:
+      github-token: ${{ secrets.GITHUB_TOKEN }}
+      badges: '[first-time-contributor,repeat-contributor,allstar-contributor]'
+      thresholds: '[0,1,5]'
+      ignore-teams: '[aws/aws-cdk-team]'
+```
+
+**Note:** You can use both `ignore-usernames` and `ignore-teams` together, with all specified users and teams being excluded.
+
+**Requirements:** The GitHub token used must have permission to read team membership information.
+For public teams, this works with standard repository permissions. For private teams, you may
+need additional permissions.
 
 ### Title Prefixes
 
@@ -150,7 +177,7 @@ titles like `chore` or `refactor`.
 
 ```yaml
 steps: 
-  - uses: aws-github-ops/github-merit-badger@main
+  - uses: cdklabs/github-merit-badger@main
     id: github-merit-badger
     with:
       github-token: ${{ secrets.GITHUB_TOKEN }}
