@@ -30,7 +30,7 @@
     "eslint-plugin-import": "^2.32.0",
     "jest": "^28.1.3",
     "jest-junit": "^16",
-    "projen": "^0.97.0",
+    "projen": "^0.97.1",
     "projen-github-action-typescript": "^0.0.514",
     "ts-jest": "^28.0.8",
     "ts-node": "^10.9.2",
