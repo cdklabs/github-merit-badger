@@ -3667,10 +3667,10 @@ projen-github-action-typescript@^0.0.514:
   resolved "https://registry.yarnpkg.com/projen-github-action-typescript/-/projen-github-action-typescript-0.0.514.tgz#c0286a383aac7fc2a9bb0b8260252b79e70be3a2"
   integrity sha512-7DcemXYrvkRSYY+iXgQCHdWXxLbfmTDlpGyxciM0WrOStZ4ymDkTnjkz66SyuGZU/E7EMxMy2b4SruYls5svZg==
 
-projen@^0.99.60:
-  version "0.99.60"
-  resolved "https://registry.yarnpkg.com/projen/-/projen-0.99.60.tgz#f4ffe260f44eafb1ebaa0fed0a75be08dbcfa313"
-  integrity sha512-LhMS5frqNRdOuqzq8pLEICMZJm07IsAW0gCwBUQQSs1FHr2YjLv9apq8x7ZwKYuLJ1Y7iaTDE2LdJLB6HQQF4g==
+projen@^0.99.61:
+  version "0.99.61"
+  resolved "https://registry.yarnpkg.com/projen/-/projen-0.99.61.tgz#9ea111a3cac1a1efd6526e3f592c7eb9db78c8b5"
+  integrity sha512-nzIa5wNQ5dcGcCen24ZEuqfTZaDiW2wHNyGTa+R9Ftfih246XKgQdjPVbX1rSrnhbFpTNQKKVM7vp1ppwD2j8g==
   dependencies:
     "@iarna/toml" "^2.2.5"
     case "^1.6.3"
