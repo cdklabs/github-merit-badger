@@ -894,9 +894,9 @@
   integrity sha512-vxhUy4J8lyeyinH7Azl1pdd43GJhZH/tP2weN8TntQblOY+A0XbT8DJk1/oCPuOOyg/Ja757rG0CgHcWC8OfMA==
 
 "@tybys/wasm-util@^0.10.2":
-  version "0.10.2"
-  resolved "https://registry.yarnpkg.com/@tybys/wasm-util/-/wasm-util-0.10.2.tgz#12b3a1b33db1f9cad4ddff1f604ab7dd00bf464e"
-  integrity sha512-RoBvJ2X0wuKlWFIjrwffGw1IqZHKQqzIchKaadZZfnNpsAYp2mM0h36JtPCjNDAHGgYez/15uMBpfGwchhiMgg==
+  version "0.10.3"
+  resolved "https://registry.yarnpkg.com/@tybys/wasm-util/-/wasm-util-0.10.3.tgz#015cba9e9dd47ce14d03d2a8c5d547bfb169665d"
+  integrity sha512-F3fo1MYrRJYL3zER0OUOmkutjr1Vp23m7OsSgp7nq4SP6OqX6C/56XFIPAl5bt3zaBRjmW7SGz3u/6LwFpYcOg==
   dependencies:
     tslib "^2.4.0"
 
@@ -1807,9 +1807,9 @@ dunder-proto@^1.0.0, dunder-proto@^1.0.1:
     gopd "^1.2.0"
 
 electron-to-chromium@^1.5.376:
-  version "1.5.376"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.376.tgz#16a9d4b72cb16c416aa73a879d92b047b96797ac"
-  integrity sha512-cUVA7/RvbFTEuw/i3obUwDTRIXojaxkResf+ibByPFxjc6XK3VNtcQXV0NSbAlJ0FMjcJGgftVVB4Qo184EXvA==
+  version "1.5.378"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.378.tgz#9ce9591ebed23e8a9119970305084b43a2906454"
+  integrity sha512-VinvOAuuPmdD1guEgGv5f2Qp7/vlfqOrUOMYNnOD4wj3pit8kRsQHzfIf6teyUGWo15Tg5+bOJaRunvyltpVWQ==
 
 emittery@^0.10.2:
   version "0.10.2"
@@ -3641,10 +3641,10 @@ projen-github-action-typescript@^0.0.514:
   resolved "https://registry.yarnpkg.com/projen-github-action-typescript/-/projen-github-action-typescript-0.0.514.tgz#c0286a383aac7fc2a9bb0b8260252b79e70be3a2"
   integrity sha512-7DcemXYrvkRSYY+iXgQCHdWXxLbfmTDlpGyxciM0WrOStZ4ymDkTnjkz66SyuGZU/E7EMxMy2b4SruYls5svZg==
 
-projen@^0.100.4:
-  version "0.100.4"
-  resolved "https://registry.yarnpkg.com/projen/-/projen-0.100.4.tgz#4dc76f1f76bbbc294d1886bd1fd5f01ae71d273d"
-  integrity sha512-OqWO+Ty7cEud5mTBcERd8Jl1GNNTrmeSTDPBe69VzyyT91Y9Czjs2EWR/jYbLSnedLlcm1CMqHKpsqmB3v2WYA==
+projen@^0.100.5:
+  version "0.100.5"
+  resolved "https://registry.yarnpkg.com/projen/-/projen-0.100.5.tgz#6ed2784f485c93d85a01e3de196d9a8cdd912e48"
+  integrity sha512-lUguntZbcS+GHdmt3SwQgYk5hQ88Itof/0T/ExjZhXgaQwH758k72t+jQPNQOa5khliRWHQSqnJNSYLcVasweA==
   dependencies:
     "@iarna/toml" "^2.2.5"
     case "^1.6.3"
