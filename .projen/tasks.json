@@ -181,13 +181,45 @@
       },
       "steps": [
         {
-          "exec": "npx npm-check-updates@20 --upgrade --target=minor --peer --no-deprecated --dep=dev,peer,prod,optional --filter=@types/jest,@types/node,@vercel/ncc,eslint-import-resolver-typescript,eslint-plugin-import,jest,projen,projen-github-action-typescript,ts-jest,ts-node,typescript,@actions/core,@actions/github,heap-js"
+          "execArgs": [
+            "npx",
+            "npm-check-updates@20",
+            "--upgrade",
+            "--target=minor",
+            "--peer",
+            "--no-deprecated",
+            "--dep=dev,prod,peer,optional",
+            "--filter=@types/jest,@types/node,@vercel/ncc,eslint-import-resolver-typescript,eslint-plugin-import,jest,projen,projen-github-action-typescript,ts-jest,ts-node,typescript,@actions/core,@actions/github,heap-js"
+          ]
         },
         {
           "exec": "yarn install --check-files"
         },
         {
-          "exec": "yarn upgrade @stylistic/eslint-plugin @types/jest @types/node @typescript-eslint/eslint-plugin @typescript-eslint/parser @vercel/ncc constructs eslint-import-resolver-typescript eslint-plugin-import eslint jest jest-junit projen projen-github-action-typescript ts-jest ts-node typescript @actions/core @actions/github heap-js"
+          "execArgs": [
+            "yarn",
+            "upgrade",
+            "@stylistic/eslint-plugin",
+            "@types/jest",
+            "@types/node",
+            "@typescript-eslint/eslint-plugin",
+            "@typescript-eslint/parser",
+            "@vercel/ncc",
+            "constructs",
+            "eslint-import-resolver-typescript",
+            "eslint-plugin-import",
+            "eslint",
+            "jest",
+            "jest-junit",
+            "projen",
+            "projen-github-action-typescript",
+            "ts-jest",
+            "ts-node",
+            "typescript",
+            "@actions/core",
+            "@actions/github",
+            "heap-js"
+          ]
         },
         {
           "exec": "npx projen"
