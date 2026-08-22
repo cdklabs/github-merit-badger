@@ -1468,9 +1468,9 @@ balanced-match@^4.0.2:
   integrity sha512-BLrgEcRTwX2o6gGxGOCNyMvGSp35YofuYzw9h1IMTRmKqttAZZVU67bdb9Pr2vUHA8+j3i2tJfjO6C6+4myGTA==
 
 baseline-browser-mapping@^2.11.12:
-  version "2.11.16"
-  resolved "https://registry.yarnpkg.com/baseline-browser-mapping/-/baseline-browser-mapping-2.11.16.tgz#0fa19a4ece2e34439ecaa3fdca8a59acfbd287fb"
-  integrity sha512-H/bNPUFHewJHyCTdjn1n3Pit5+2GmWT6mmeHImPX+8MA9NA6b67jO4gYmi4jTbCJb2otq34KMZnovndDPqJwhQ==
+  version "2.11.17"
+  resolved "https://registry.yarnpkg.com/baseline-browser-mapping/-/baseline-browser-mapping-2.11.17.tgz#a168205490077c5d7c542f1610016af4ade8f875"
+  integrity sha512-KAUDn1OSS0fmPlGO+NOUMRcOQ/b/shUBH3OgkG73mPgdf+JD/BQ6fHboGxNOxnUmlwcq+lLq3dTkayRPuSfXwg==
 
 before-after-hook@^2.2.0:
   version "2.2.3"
@@ -1807,9 +1807,9 @@ dunder-proto@^1.0.0, dunder-proto@^1.0.1:
     gopd "^1.2.0"
 
 electron-to-chromium@^1.5.402:
-  version "1.5.411"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.411.tgz#d56c7e43f91e2b3abb53b4eecd646e20d0b18b34"
-  integrity sha512-gglkxzokjHfawpGxq75XdBV2/l3BAPzrsMs70qgaZdTW5rpV1tC4MdgJVP9fN126bODA4ZJQkn1wryEzJyQXIg==
+  version "1.5.412"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.412.tgz#79b93ba8d96ada5c9ef0d916ea0663f01ea15498"
+  integrity sha512-z4rMe3esBzlzovKHj4gxJnsCGZRK5l4baUvm+gCGJBPE+gsyUMKsuU9tnEUtI1dOebXz1ytAPGjvXhmQ7rIPwA==
 
 emittery@^0.10.2:
   version "0.10.2"
@@ -2662,9 +2662,9 @@ is-number@^7.0.0:
   integrity sha512-41Cifkg6e8TylSpdtTpeLVMqvSBEVzTttHvERD741+pnZ8ANv0004MRL43QKPDlK9cGvNp6NZWZUBlbGXYxxng==
 
 is-plain-object@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/is-plain-object/-/is-plain-object-5.0.0.tgz#4427f50ab3429e9025ea7d52e9043a9ef4159344"
-  integrity sha512-VRSzKkbMm5jMDoKLbltAkFQ5Qr7VDiTFGXxYFXXowVj387GeGNOCsOH6Msy00SGZ3Fp84b1Naa1psqgcCIEP5Q==
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/is-plain-object/-/is-plain-object-5.1.0.tgz#22ed7b5e856bb57966348e5b9468dada42be87f4"
+  integrity sha512-bUi/yjmtKYcRVUtWRGr0UA6xEFh2I6zWUwMrUXB3s7bmYCaZ8a+0ZsTRkrawh/mzlSD1Y0Ph8bp/U+TvBpWDNw==
 
 is-regex@^1.2.1:
   version "1.2.1"
@@ -3643,10 +3643,10 @@ projen-github-action-typescript@^0.0.514:
   resolved "https://registry.yarnpkg.com/projen-github-action-typescript/-/projen-github-action-typescript-0.0.514.tgz#c0286a383aac7fc2a9bb0b8260252b79e70be3a2"
   integrity sha512-7DcemXYrvkRSYY+iXgQCHdWXxLbfmTDlpGyxciM0WrOStZ4ymDkTnjkz66SyuGZU/E7EMxMy2b4SruYls5svZg==
 
-projen@^0.101.36:
-  version "0.101.36"
-  resolved "https://registry.yarnpkg.com/projen/-/projen-0.101.36.tgz#57491153a65a735c0a5ce33086e1259c8d73d8dd"
-  integrity sha512-w/tLnRmne8updtW4ak3yEihSm8x+Om5efPHbBkYyaIUS3q9PhcsRidcrraX+vJkJvkFkuCbpd9EPfrPS1pY3EA==
+projen@^0.103.1:
+  version "0.103.1"
+  resolved "https://registry.yarnpkg.com/projen/-/projen-0.103.1.tgz#74f956fc57211b3409a66f1e3d6e8859c1709c71"
+  integrity sha512-TpHXhoEwiHjMFMeJu4OLgUEh9VtDQx02BY4Ng1KckHP6PWNWF5CS+LfnxUmecp1z9JR0fno2Bnf0FblIktkqMQ==
   dependencies:
     "@iarna/toml" "^2.2.5"
     case "^1.6.3"
