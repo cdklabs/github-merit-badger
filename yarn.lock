@@ -2177,9 +2177,9 @@ fast-levenshtein@^2.0.6:
   integrity sha512-DCXu6Ifhqcks7TZKY3Hxp3y6qphY5SJZmrWMDrKcERSOXWQdMhU9Ig/PYrzyw/ul9jOIyh0N4M0tbC5hodg8dw==
 
 fastq@^1.6.0:
-  version "1.20.2"
-  resolved "https://registry.yarnpkg.com/fastq/-/fastq-1.20.2.tgz#b762f46b4fa9c563adba6dd213a8984d8a5cd59f"
-  integrity sha512-UpGiiODyCGprM8EPP6JodP6jC9Rws6TCuiDOD+nn0CJhR8guI3g/ozo4ugL0vJ+Yz1UtJuuRPqvQuybVOF1VQA==
+  version "1.20.3"
+  resolved "https://registry.yarnpkg.com/fastq/-/fastq-1.20.3.tgz#7ab8731e647b56abcfeee997dae333ca3ee1d04d"
+  integrity sha512-XKv5nnLs6nLF71NgiKJLIZFLkPyIEuOselLG7ujZnGrRfQK8HpvY+WqKhAJUAdLomwVHErVS4LfxFlPq0/FTAw==
   dependencies:
     reusify "^1.0.4"
 
@@ -3643,10 +3643,10 @@ projen-github-action-typescript@^0.0.514:
   resolved "https://registry.yarnpkg.com/projen-github-action-typescript/-/projen-github-action-typescript-0.0.514.tgz#c0286a383aac7fc2a9bb0b8260252b79e70be3a2"
   integrity sha512-7DcemXYrvkRSYY+iXgQCHdWXxLbfmTDlpGyxciM0WrOStZ4ymDkTnjkz66SyuGZU/E7EMxMy2b4SruYls5svZg==
 
-projen@^0.103.10:
-  version "0.103.10"
-  resolved "https://registry.yarnpkg.com/projen/-/projen-0.103.10.tgz#19dacabbd90abad7588b54a6774e58dbad9c820d"
-  integrity sha512-CiX+VsdvGWvWb9qpMUhZm3MyNV0CSPuUT7bkBNsFcRr65NywSpdQ2MkKtfaht683C+wB8AVYWyfPxF+k1vja/w==
+projen@^0.103.11:
+  version "0.103.11"
+  resolved "https://registry.yarnpkg.com/projen/-/projen-0.103.11.tgz#e1cbe0a5b1e08fe45f481e1114b1c39503b686e8"
+  integrity sha512-aUT2VKHEOdjf4evZMR7xKTYUeo8fUMmcbHUuCeewPO8LjFzmQmAYuge2zA0s+Frp9e7uKGekv2zjAKPmjrBSFw==
   dependencies:
     "@iarna/toml" "^2.2.5"
     case "^1.6.3"
