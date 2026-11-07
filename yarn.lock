@@ -1526,9 +1526,9 @@ camelcase@^6.2.0:
   integrity sha512-Gmy6FhYlCY7uOElZUSbxo2UCDH8owEk996gkbrpsgGtrJLM3J7jGxl9Ic7Qwwj4ivOE5AWZWRMecDdF7hqGjFA==
 
 caniuse-lite@^1.0.30001819:
-  version "1.0.30001822"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001822.tgz#8fb8d945f5c89b1701f4360745144e3fe2ee7a7a"
-  integrity sha512-Y3fvWQWzc69dlCyr07tuNrEhotv+db5FpMSPD3slZnkPKwRNOKwFBz2dP966XUmWMXLTOt+YShkFoQoom3U7hg==
+  version "1.0.30001823"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001823.tgz#331a7cb49aa317517697e76b0b1295f2225959fe"
+  integrity sha512-TQ5s/djDjNk1axreUW+4rULH+BmdCMLiJkhaXnO5wqivG7tITkSUj4ItIdzqdZHKaXcHAV8dhH3JxOM7/7bwqw==
 
 case@^1.6.3:
   version "1.6.3"
@@ -1762,9 +1762,9 @@ dunder-proto@^1.0.0, dunder-proto@^1.0.1:
     gopd "^1.2.0"
 
 electron-to-chromium@^1.5.464:
-  version "1.5.477"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.477.tgz#b5f39de72d9b60ac8e06a3f83ba08c7c33d582d9"
-  integrity sha512-PN++F4zWZoVDGWinxMnSCpVqKhqFOJfLXxdU8bYJKudAEsHL/XKVITOKWVbfMt1r276Mi9RDLU9VHx9uKJ4RMQ==
+  version "1.5.478"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.5.478.tgz#e1d6d5279242d2f90fa287a8343dc04ddc0c52ec"
+  integrity sha512-pftG+ma5Lm8O6/p45bhYT6StBN5ziQymaRzmCZwFl8DwWHKPPD93FdOmP1aqftcepolQYvrcyTLa17kE8Yf+jg==
 
 emittery@^0.10.2:
   version "0.10.2"
@@ -3598,10 +3598,10 @@ projen-github-action-typescript@^0.0.514:
   resolved "https://registry.yarnpkg.com/projen-github-action-typescript/-/projen-github-action-typescript-0.0.514.tgz#c0286a383aac7fc2a9bb0b8260252b79e70be3a2"
   integrity sha512-7DcemXYrvkRSYY+iXgQCHdWXxLbfmTDlpGyxciM0WrOStZ4ymDkTnjkz66SyuGZU/E7EMxMy2b4SruYls5svZg==
 
-projen@^0.104.25:
-  version "0.104.25"
-  resolved "https://registry.yarnpkg.com/projen/-/projen-0.104.25.tgz#9ec1f63a9e00c2d057d6e7b96f309fc19ba91686"
-  integrity sha512-HmeK997sqh95aVSFNJR6WShSlZ2yzRrzL8D8EsXsmF5TKO3Zk84glesW2ntgPnznaI0bXuNAEZteQ1tl/Nptjw==
+projen@^0.104.27:
+  version "0.104.27"
+  resolved "https://registry.yarnpkg.com/projen/-/projen-0.104.27.tgz#70b1d0b1421258e73af77df8ce765d8f23cdb415"
+  integrity sha512-L02IpJLrgNUTs06ssI256E+E0uaFQ5QZG3VaPntMqXVlvnuDaCVJHPx6JGt6pM/fxgvy0ZAKaLYxY3sSGXEOgg==
   dependencies:
     "@iarna/toml" "^2.2.5"
     case "^1.6.3"
